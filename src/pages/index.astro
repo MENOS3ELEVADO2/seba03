@@ -1,16 +1,23 @@
 ---
 import "../styles/fondo.css";
-import Token from "../components/token.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Porafolio</title>
-  </head>
-  <body>
-    <h1>¡Bienvenido a mi sitio Astro!</h1>
-    <p>Esta es la página principal.</p>
-	<Token titulo="Mi Token" descripcion="Este es un componente de ejemplo." />
-  </body>
-</html>
+<Layout>
+  <div class="blog-layout">
+    <aside class="sidebar">
+      <img src="../assets/mi-perfil.jpg" alt="Foto de perfil" class="perfil" />
+      <div class="botones">
+        <button>Inicio</button>
+        <button>Sobre mí</button>
+        <button>Proyectos</button>
+        <button>Contacto</button>
+      </div>
+    </aside>
+    <section class="contenido">
+      <h1>Bienvenido a mi blog</h1>
+      <p>Aquí puedes ver mis publicaciones y proyectos destacados.</p>
+      <!-- Aquí puedes agregar más contenido del blog -->
+    </section>
+  </div>
+</Layout>
