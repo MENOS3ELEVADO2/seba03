@@ -1,27 +1,38 @@
 ---
+// Extraemos las propiedades 'titulo' y 'descripcion' del objeto Astro.props.
+// Esto permite usar esas variables directamente en el HTML.
 const { titulo, descripcion } = Astro.props;
 ---
 
+<!-- Contenedor principal con clase 'token' -->
 <div class="token">
+  <!-- Título dinámico que se muestra en un encabezado h2 -->
   <h2>{titulo}</h2>
+
+  <!-- Descripción dinámica que se muestra en un párrafo -->
   <p>{descripcion}</p>
+
+  <!-- Botón interactivo (puedes agregarle funcionalidad con JS si lo necesitas) -->
   <button>Haz clic aquí</button>
 </div>
 
 <style>
+/* Estilos para el contenedor con clase 'token' */
 .token {
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  /* Animación de fondo */
-  background: linear-gradient(270deg, #222, #444, #222);
-  background-size: 400% 400%;
-  animation: fondoAnimado 6s ease infinite;
+  padding: 2rem;               /* Espaciado interno generoso */
+  border-radius: 1rem;         /* Bordes redondeados */
+  text-align: center;          /* Centra el contenido horizontalmente */
+
+  /* Fondo animado con un degradado que se mueve */
+  background: linear-gradient(270deg, #222, #444, #222); /* Degradado oscuro */
+  background-size: 400% 400%;  /* Tamaño extendido para permitir el movimiento */
+  animation: fondoAnimado 6s ease infinite; /* Aplica la animación de fondo */
 }
 
+/* Definición de la animación 'fondoAnimado' */
 @keyframes fondoAnimado {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%   { background-position: 0% 50%; }    /* Inicio del movimiento */
+  50%  { background-position: 100% 50%; }  /* Punto medio: fondo se desplaza completamente */
+  100% { background-position: 0% 50%; }    /* Vuelve al inicio para repetir */
 }
 </style>
