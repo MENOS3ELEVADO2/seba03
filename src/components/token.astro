@@ -5,4 +5,23 @@ const { titulo, descripcion } = Astro.props;
 <div class="token">
   <h2>{titulo}</h2>
   <p>{descripcion}</p>
+  <button>Haz clic aquí</button>
 </div>
+
+<style>
+.token {
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  /* Animación de fondo */
+  background: linear-gradient(270deg, #222, #444, #222);
+  background-size: 400% 400%;
+  animation: fondoAnimado 6s ease infinite;
+}
+
+@keyframes fondoAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>

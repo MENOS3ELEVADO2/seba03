@@ -18,3 +18,21 @@ a {
     font-family: 'Courier New', Courier, monospace;
 }
 /* CSS Document */
+
+/* Fondo de pantalla */
+body {
+    background-image: url('https://wallpapercave.com/wp/wp4056410.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* Estilos para el texto */
+h1, p, a {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Estilos para los enlaces */
+a {
+    text-decoration: none;
+}       
