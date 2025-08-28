@@ -5,7 +5,7 @@ body {
 
 /* Estilo principal para títulos */
 h1 {
-    color: white;
+    color: red;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -19,7 +19,7 @@ p {
 
 /* Estilo para enlaces */
 a {
-    color: white;
+    color: blue;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -31,18 +31,6 @@ body {
     background-position: 520px 50%;       /* Posicionar en la esquina inferior derecha */
     background-attachment: fixed;            /* Imagen fija al hacer scroll */
     background-size: 1000px 1000px;                   /* Tamaño automático de la imagen */
-}
-
-/* Estilos comunes para encabezados, párrafos y enlaces */
-h1, p, a {
-    color: white;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Quitar el subrayado de los enlaces */
-a {
-    text-decoration: none;
 }
 
 /* Barra lateral del blog */
@@ -97,5 +85,5 @@ a {
 .contenido {
     flex: 1;                                 /* Ocupa el espacio restante del flex container */
     padding: 2.5rem 2.5rem 2.5rem 2rem;      /* Espaciado interno (más a la izquierda) */
-    color: #fff;                             /* Texto blanco */
+    color: #ff0000;                             /* Texto blanco */
 }

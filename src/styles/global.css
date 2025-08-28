@@ -1,22 +1,29 @@
+/* Carga una fuente personalizada llamada 'PositiveSystem' desde la carpeta /fonts */
 @font-face {
-  font-family: 'PositiveSystem';
-  src: url('/fonts/PositiveSystem.otf') format('opentype');
+  font-family: 'PositiveSystem'; /* Nombre de la fuente personalizada */
+  src: url('/fonts/PositiveSystem.otf') format('opentype'); /* Ruta y formato del archivo de fuente */
 }
 
+/* Clase para aplicar estilo de texto pixelado con sombra y alineación */
 .pixel-text {
-  font-family: 'PositiveSystem', monospace;
-  font-size: 24px;
-  color: #00ffcc;
-  text-align: center;
-  margin-top: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #00ffcc;
-  animation: blink-caret 0.75s step-end infinite;
+  font-family: 'PositiveSystem', monospace; /* Usa la fuente personalizada, y si no está disponible, una fuente monoespaciada */
+  font-size: 75px; /* Tamaño grande de fuente */
+  color: white; /* Color del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  
+  /* Aplica dos sombras al texto:
+     - Una sombra negra desplazada 5px en X y Y
+     - Otra sombra verde desplazada 7px en X y 8px en Y
+  */
+  text-shadow: 5px 5px 0 black, 7px 8px 0 green;
+
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
 }
 
+/* Animación para parpadeo de un cursor o caret */
 @keyframes blink-caret {
-  50% {
-    border-color: transparent;
+  50% { 
+    border-color: white; /* Esto no tendrá efecto debido al valor fuera de rango */
   }
-} 
+}
