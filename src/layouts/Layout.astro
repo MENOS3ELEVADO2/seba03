@@ -27,21 +27,33 @@ import "../styles/global.css";
     </footer>
   
 <script>
+  // Texto que se va a mostrar con efecto de escritura
   const texto = "Bienvenido a mi portafolio";
+
+  // Se obtiene el elemento HTML con el id "bienvenida"
   const elemento = document.getElementById("bienvenida");
+
+  // Variable para llevar el control del índice actual del texto
   let i = 0;
 
+  // Función que escribe el texto letra por letra
   function escribir() {
+    // Verifica si aún quedan letras por escribir
     if (i < texto.length) {
+      // Agrega la letra actual al contenido del elemento
       elemento.textContent += texto.charAt(i);
+
+      // Avanza al siguiente carácter
       i++;
-      setTimeout(escribir, 100); // velocidad de escritura
+
+      // Llama nuevamente a la función después de 100 milisegundos
+      // Esto crea el efecto de "máquina de escribir"
+      setTimeout(escribir, 100);
     }
   }
 
+  // Inicia el efecto de escritura al cargar el script
   escribir();
 </script>
-
-
   </body>
 </html>
