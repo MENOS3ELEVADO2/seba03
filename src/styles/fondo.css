@@ -1,98 +1,101 @@
+/* Fondo negro para toda la página */
 body {
     background-color: black;
 }
 
+/* Estilo principal para títulos */
 h1 {
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
+/* Estilo para los párrafos */
 p {
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+
+/* Estilo para enlaces */
 a {
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
-/* CSS Document */
 
-/* Fondo de pantalla */
+/* Fondo con imagen animada tipo ASCII */
 body {
-    background-image: url('../assets/ascii-animation.gif');
-    background-repeat: no-repeat;
-    background-position: right bottom; /* esquina inferior derecha */
-    background-attachment: fixed;
-    background-size: auto; /* o un tamaño específico si lo deseas */
+    background-image: url('../assets/tank.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;            /* No repetir la imagen */
+    background-position: 520px 50%;       /* Posicionar en la esquina inferior derecha */
+    background-attachment: fixed;            /* Imagen fija al hacer scroll */
+    background-size: 1000px 1000px;                   /* Tamaño automático de la imagen */
 }
-/* Estilos para el texto */
+
+/* Estilos comunes para encabezados, párrafos y enlaces */
 h1, p, a {
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
-/* Estilos para los enlaces */
+
+/* Quitar el subrayado de los enlaces */
 a {
     text-decoration: none;
 }
 
-.blog-layout {
-    display: flex;
-    max-width: 1100px;         /* Más ancho para separar el contenido */
-    margin: 40px 0 40px 40px;  /* Solo margen izquierdo */
-    background: rgba(0,0,0,0.7);
-    border-radius: 1rem;
-    box-shadow: 0 0 20px #111;
-    overflow: hidden;
-}
-
+/* Barra lateral del blog */
 .sidebar {
-    width: 200px;              /* Más angosto */
-    min-width: 160px;
-    background: rgba(30,30,30,0.95);
-    display: flex;
+    width: 50px;                            /* Ancho fijo */
+    min-width: 100px;                        /* Ancho mínimo */
+    display: flex;                           /* Flexbox para ordenar verticalmente */
     flex-direction: column;
-    align-items: center;
-    padding: 2rem 0.5rem 2rem 1rem; /* Menos padding derecho */
-    box-shadow: 2px 0 10px #1118;
+    align-items: center;                     /* Centrar elementos horizontalmente */
+    padding: 2rem 0.5rem 2rem 1rem;          /* Espaciado interno */
+    box-shadow: 2px 0 10px solid (252, 6, 6, 0.533);            /* Sombra en el borde derecho */
 }
 
+/* Imagen de perfil */
 .perfil {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 2rem;
-    border: 3px solid #068419;
-    
+    background-image: url('../assets/otro mapche.jpeg'); /* Ruta de la imagen de perfil */
+    width: 150px;
+    height: 150px;
+    border: 100%;                      /* Imagen circular */
+    object-fit: cover;                       /* Ajuste de imagen sin deformarla */
+    margin-bottom: 1cm;                     /* Espacio debajo de la imagen */
+    border: 3px solid green;               /* Borde verde alrededor del perfil */
 }
 
+/* Contenedor para botones */
 .botones {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: column;                  /* Botones uno debajo del otro */
+    gap: 1rem;                                /* Espacio entre botones */
     width: 100%;
 }
 
+/* Estilo de los botones */
 .botones button {
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1rem;                    /* Espaciado interno */
     border: none;
-    border-radius: 0.5rem;
-    background: #444;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s;
+    border-radius: 0.5rem;                   /* Bordes redondeados */
+    background: green;                        /* Color de fondo */
+    color: black;                             /* Color del texto */
+    font-size: 1rem;                         /* Tamaño de fuente */
+    cursor: pointer;                         /* Cambia el cursor al pasar por encima */
+    transition: background 0.2s;             /* Transición suave al cambiar el fondo */
 }
 
+/* Efecto hover para los botones */
 .botones button:hover {
-    background: #666;
+    background: black;                      /* Color más claro al pasar el mouse */
+    color: #ffffff;
 }
 
+/* Área principal de contenido */
 .contenido {
-    flex: 1;
-    padding: 2.5rem 2.5rem 2.5rem 2rem; /* Más espacio a la izquierda */
-    color: #fff;
+    flex: 1;                                 /* Ocupa el espacio restante del flex container */
+    padding: 2.5rem 2.5rem 2.5rem 2rem;      /* Espaciado interno (más a la izquierda) */
+    color: #fff;                             /* Texto blanco */
 }
