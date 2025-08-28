@@ -77,33 +77,26 @@ body {
 /* Efecto hover para los botones */
 .botones button:hover {
     background: black;                      /* Color más claro al pasar el mouse */
-    color: #ffffff;
+    color: white;
 }
 
 /* Área principal de contenido */
 .contenido {
     flex: 1;                                 /* Ocupa el espacio restante del flex container */
     padding: 2.5rem 2.5rem 2.5rem 2rem;      /* Espaciado interno (más a la izquierda) */
-    color: #ff0000;                             /* Texto blanco */
     font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
     font-size: 1.2rem;                       /* Tamaño de fuente */
     line-height: 1.6;                        /* Altura de línea para mejor legibilidad */
     overflow-y: auto;                        /* Barra de desplazamiento vertical si es necesario */
     max-height: 100vh;                       /* Altura máxima para evitar desbordamiento */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo
-    semitransparente para mejorar la legibilidad */
+    background: black; /* Fondo semitransparente para mejorar la legibilidad */
     border-radius: 0.5rem;                   /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
-    backdrop-filter: blur(5px);              /* Efecto de desenfoque de fondo */
-    border: 2px solid green;                 /* Borde verde alrededor del contenido */
+    border: 2px solid blue;                 /* Borde azul alrededor del contenido */
     margin-bottom: 2rem;                     /* Espacio debajo del contenido */
     margin-left: 10rem;                      /* Espacio a la izquierda para evitar la barra lateral */
     margin-right: 2rem;                      /* Espacio a la derecha */
-    margin-top: 2rem;                        /* Espacio arriba del contenido */
+    margin-top: 1rem;                        /* Espacio arriba del contenido */
     white-space: pre-wrap;                   /* Mantener espacios y saltos de línea */
     word-wrap: break-word;                   /* Romper palabras largas */
     text-align: justify;                     /* Justificar el texto */
-    text-justify: inter-word;                /* Justificación entre palabras */
-    scrollbar-width: thin;                   /* Ancho del scrollbar para Firefox */
-    scrollbar-color: green black;            /* Colores del scrollbar para Firefox */   
 }
