@@ -2,23 +2,41 @@
 import "../styles/fondo.css";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+
 ---
 
+<!-- Este componente Layout envuelve toda la página.
+     Se importa desde la carpeta /layouts y define la estructura base (head, body, etc.) -->
 <Layout>
+
+  <!-- Contenedor principal del blog con diseño en flexbox -->
   <div class="blog-layout">
+
+    <!-- Barra lateral que contiene la imagen de perfil y los botones de navegación -->
     <aside class="sidebar">
+
+      <!-- Imagen de perfil del autor del blog -->
       <img src="../assets/mi-perfil.jpg" alt="Foto de perfil" class="perfil" />
+      
+      <!-- Contenedor de botones de navegación -->
       <div class="botones">
-        <button>Inicio</button>
-        <button>Sobre mí</button>
-        <button>Proyectos</button>
-        <button>Contacto</button>
+        <button class="win95-button">Inicio</button>
+        <button class="win95-button">Sobre mí</button>
+        <button class="win95-button">Proyectos</button>
+        <button class="win95-button">Contacto</button>
       </div>
+
     </aside>
+
+    <!-- Sección principal del contenido del blog -->
     <section class="contenido">
-      <h1>Bienvenido a mi blog</h1>
-      <p>Aquí puedes ver mis publicaciones y proyectos destacados.</p>
-      <!-- Aquí puedes agregar más contenido del blog -->
+      <h1>Bienvenido a mi blog</h1> <!-- Título principal -->
+      <p>Aquí puedes ver mis publicaciones y proyectos destacados.</p> <!-- Descripción introductoria -->
+
+      <!-- Aquí puedes agregar más contenido del blog, como artículos, tarjetas, etc. -->
     </section>
+
   </div>
+
 </Layout>
+

@@ -35,12 +35,12 @@ body {
 
 /* Barra lateral del blog */
 .sidebar {
-    width: 50px;                            /* Ancho fijo */
+    width: 250px;                            /* Ancho fijo */
     min-width: 100px;                        /* Ancho mínimo */
     display: flex;                           /* Flexbox para ordenar verticalmente */
     flex-direction: column;
     align-items: center;                     /* Centrar elementos horizontalmente */
-    padding: 5rem 5rem 5rem 5rem ;          /* Espaciado interno */
+    padding: 2rem ;          /* Espaciado interno */
 }
 
 /* Imagen de perfil */
@@ -48,50 +48,75 @@ body {
     background-image: url('../assets/otro mapche.jpeg'); /* Ruta de la imagen de perfil */
     width: 150px;
     height: 150px;
-    border: 100%;                      /* Imagen circular */
+    border: 100%;                     
     object-fit: cover;                       /* Ajuste de imagen sin deformarla */
     margin-bottom: 1cm;                     /* Espacio debajo de la imagen */
-    border: 3px solid green;               /* Borde verde alrededor del perfil */
+    border: 3px solid green;               /* Borde verde alrededor del perfil */   
+    padding: 8px;
+    background-color: #1a1a1a;
+    border: 4px solid #00ff99;
+    box-shadow: 0 0 10px #00ff99, inset 0 0 5px #000;
+    display: inline-block;
+    border-radius: 8px;
 }
 
-/* Contenedor para botones */
-.botones {
-    display: flex;
-    flex-direction: column;                  /* Botones uno debajo del otro */
-    gap: 1rem;                                /* Espacio entre botones */
-    width: 100%;
+
+
+/* Estilo para los botones tipo Windows 95 */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.win95-button {
+  font-family: 'Press Start 2P', monospace; /* Fuente pixelada */
+  font-size: 12px;
+  color: black;
+  background-color: #c0c0c0; /* Gris clásico */
+  border: 2px solid #fff; /* Borde superior/izquierdo claro */
+  border-right: 2px solid #404040; /* Borde derecho oscuro */
+  border-bottom: 2px solid #404040;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff; /* Bisel interno */
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
-/* Estilo de los botones */
-.botones button {
-    padding: 0.5rem 0.8rem;                    /* Espaciado interno */
-    border: none;
-    border-radius: 0.5rem;                   /* Bordes redondeados */
-    background: green;                        /* Color de fondo */
-    color: black;                             /* Color del texto */
-    font-size: 1rem;                         /* Tamaño de fuente */
-    cursor: pointer;                         /* Cambia el cursor al pasar por encima */
-    transition: background 0.2s;             /* Transición suave al cambiar el fondo */
+.win95-button:active {
+  border: 2px solid #404040;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #fff;
 }
 
-/* Efecto hover para los botones */
-.botones button:hover {
-    background: black;                      /* Color más claro al pasar el mouse */
-    color: white;
+
+
+/* Contenedor principal del blog */
+.blog-layout {
+  display: flex;              /* Alinea sidebar y contenido en fila */
+  flex-direction: row;        /* (opcional, ya es el valor por defecto) */
+  max-width: 1200px;
+  margin: 2rem auto;
 }
+
+
 
 /* Área principal de contenido */
 .contenido {
-    flex: 1;                                 /* Ocupa el espacio restante del flex container */
+    flex: 1;
+    display: flex;                                 /* Ocupa el espacio restante del flex container */
     padding: 2.5rem 2.5rem 2.5rem 2rem;      /* Espaciado interno (más a la izquierda) */
     font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
     font-size: 1.2rem;                       /* Tamaño de fuente */
+    flex-direction: row;                      /* Dirección de los elementos en fila */
     line-height: 1.6;                        /* Altura de línea para mejor legibilidad */
-    overflow-y: auto;                        /* Barra de desplazamiento vertical si es necesario */
+    overflow-y: hidden;                        /* Barra de desplazamiento vertical si es necesario */
     max-height: 100vh;                       /* Altura máxima para evitar desbordamiento */
     background: black; /* Fondo semitransparente para mejorar la legibilidad */
     border-radius: 0.5rem;                   /* Bordes redondeados */
     border: 2px solid blue;                 /* Borde azul alrededor del contenido */
+    box-shadow: 0 0 20px #060678; /* Sombra azul alrededor del contenedor */
+    max-width: 1100px;                       /* Ancho máximo para pantallas grandes */
     margin-bottom: 2rem;                     /* Espacio debajo del contenido */
     margin-left: 10rem;                      /* Espacio a la izquierda para evitar la barra lateral */
     margin-right: 2rem;                      /* Espacio a la derecha */
