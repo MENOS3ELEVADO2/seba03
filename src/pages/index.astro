@@ -2,6 +2,8 @@
 import "../styles/fondo.css";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import Token from "../components/token.astro";
+import "../styles/card.css";
 
 ---
 
@@ -34,9 +36,53 @@ import "../styles/global.css";
       <p>Aquí puedes ver mis publicaciones y proyectos destacados.</p> <!-- Descripción introductoria -->
 
       <!-- Aquí puedes agregar más contenido del blog, como artículos, tarjetas, etc. -->
-    </section>
+    
+      <div id="inicio" class="card visible">
+        <h2>inicio</h2>
+        <p>Inicio</p>
+        <!-- Contenedor para las tarjetas de contenido -->
+      </div>
 
+      <div id="sobre-mi" class="card oculto">
+        <h2>Sobre mí</h2>
+        <p>sobre mi</p>
+        <!-- Contenedor para las tarjetas de contenido -->
+      
+      </div>
+
+      <div id="proyectos" class="card oculto">
+        <h2>Proyectos</h2>
+        <p>Proyectos</p>
+        <!-- Contenedor para las tarjetas de contenido -->
+      </div>
+
+      <div id="contacto" class="card oculto">
+        <h2>Contacto</h2>
+        <p>contacto</p>
+        <!-- Contenedor para las tarjetas de contenido -->
+      </div>
+
+    </section>
   </div>
 
-</Layout>
 
+
+  <script>
+  const botones = document.querySelectorAll(".win95-button");
+  const tarjetas = document.querySelectorAll(".card");
+
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+      const texto = boton.textContent.toLowerCase().replace(" ", "");
+
+      tarjetas.forEach(t => t.classList.add("oculto"));
+      const activa = document.getElementById(texto);
+      if (activa) {
+        activa.classList.remove("oculto");
+        activa.classList.add("visible");
+      }
+    });
+  });
+</script>
+
+</Layout>

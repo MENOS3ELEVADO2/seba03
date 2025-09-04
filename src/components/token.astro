@@ -2,6 +2,7 @@
 // Extraemos las propiedades 'titulo' y 'descripcion' del objeto Astro.props.
 // Esto permite usar esas variables directamente en el HTML.
 const { titulo, descripcion } = Astro.props;
+import '../styles/card.css';
 ---
 
 <!-- Contenedor principal con clase 'token' -->
@@ -15,3 +16,4 @@ const { titulo, descripcion } = Astro.props;
   <!-- Botón interactivo (puedes agregarle funcionalidad con JS si lo necesitas) -->
   <button>Haz clic aquí</button>
 </div>
+
