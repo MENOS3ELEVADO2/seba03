@@ -1,6 +1,6 @@
 /* Fondo negro para toda la página */
 body {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 /* Estilo principal para títulos */
@@ -35,51 +35,49 @@ body {
 
 /* Barra lateral del blog */
 .sidebar {
-    width: 250px;                            /* Ancho fijo */
-    min-width: 100px;                        /* Ancho mínimo */
+    width: auto;                            /* Ancho fijo */
+    min-width: auto;                        /* Ancho mínimo */
     display: flex;                           /* Flexbox para ordenar verticalmente */
     flex-direction: column;
     align-items: center;                     /* Centrar elementos horizontalmente */
-    padding: 2rem ;          /* Espaciado interno */
+    padding: auto ;          /* Espaciado interno */
 }
 
 /* Imagen de perfil */
 .perfil {
     background-image: url('../assets/otro mapche.jpeg'); /* Ruta de la imagen de perfil */
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border: 100%;                     
-    object-fit: cover;                       /* Ajuste de imagen sin deformarla */
-    margin-bottom: 1cm;                     /* Espacio debajo de la imagen */
-    border: 3px solid green;               /* Borde verde alrededor del perfil */   
-    padding: 8px;
-    background-color: #1a1a1a;
-    border: 4px solid #00ff99;
-    box-shadow: 0 0 10px #00ff99, inset 0 0 5px #000;
-    display: inline-block;
-    border-radius: 8px;
-}
+    margin-bottom: 2cm;                     /* Espacio debajo de la imagen */
+    background-size: cover;                 /* Cubrir todo el contenedor */
+    background-position: center;            /* Centrar la imagen */ 
+    background-repeat: no-repeat;           /* No repetir la imagen */
+    position: relative;                      /* Posicionamiento relativo */
+    z-index: 1;                             /* Asegura que la imagen esté por encima de otros elementos */
+    transition: transform 0.3s ease;        /* Transición suave para el efecto hover */
 
-
+  }
 
 /* Estilo para los botones tipo Windows 95 */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .win95-button {
   font-family: 'Press Start 2P', monospace; /* Fuente pixelada */
-  font-size: 12px;
+  font-size: 22px;
   color: black;
   background-color: #c0c0c0; /* Gris clásico */
   border: 2px solid #fff; /* Borde superior/izquierdo claro */
   border-right: 2px solid #404040; /* Borde derecho oscuro */
   border-bottom: 2px solid #404040;
-  padding: 8px 16px;
+  padding: 10px 10px;
   display: flex;
   align-items: center;
   gap: 8px;
   box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff; /* Bisel interno */
   cursor: pointer;
-  text-transform: uppercase;
+  margin: 5px 0; /* Espacio entre botones */
+
 }
 
 .win95-button:active {
