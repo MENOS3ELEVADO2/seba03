@@ -63,21 +63,22 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .win95-button {
+  width: 100%; /* Ancho completo del contenedor */
+  padding: 1rem; /* Espaciado interno */
   font-family: 'Press Start 2P', monospace; /* Fuente pixelada */
-  font-size: 22px;
+  font-size: 15px;
   color: black;
   background-color: #c0c0c0; /* Gris clásico */
   border: 2px solid #fff; /* Borde superior/izquierdo claro */
   border-right: 2px solid #404040; /* Borde derecho oscuro */
   border-bottom: 2px solid #404040;
-  padding: 10px 10px;
+  padding: 10px 15px 10px; /* Espaciado interno */
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px; /* Espacio entre icono y texto */
   box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff; /* Bisel interno */
   cursor: pointer;
   margin: 5px 0; /* Espacio entre botones */
-
 }
 
 .win95-button:active {
@@ -87,8 +88,6 @@ body {
   box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #fff;
 }
 
-
-
 /* Contenedor principal del blog */
 .blog-layout {
   display: flex;              /* Alinea sidebar y contenido en fila */
@@ -97,8 +96,6 @@ body {
   margin: 2rem auto;
 }
 
-
-
 /* Área principal de contenido */
 .contenido {
     flex: 1;
@@ -106,7 +103,7 @@ body {
     padding: 2.5rem 2.5rem 2.5rem 2rem;      /* Espaciado interno (más a la izquierda) */
     font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
     font-size: 1.2rem;                       /* Tamaño de fuente */
-    flex-direction: row;                      /* Dirección de los elementos en fila */
+    flex-direction: column;                      /* Dirección de los elementos en fila */
     line-height: 1.6;                        /* Altura de línea para mejor legibilidad */
     overflow-y: hidden;                        /* Barra de desplazamiento vertical si es necesario */
     max-height: 100vh;                       /* Altura máxima para evitar desbordamiento */
