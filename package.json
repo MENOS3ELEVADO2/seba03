@@ -10,5 +10,18 @@
   },
   "dependencies": {
     "astro": "^5.13.3"
-  }
+  },
+  "description": "```sh\r npm create astro@latest -- --template basics\r ```",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MENOS3ELEVADO2/seba03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MENOS3ELEVADO2/seba03/issues"
+  },
+  "homepage": "https://github.com/MENOS3ELEVADO2/seba03#readme"
 }
