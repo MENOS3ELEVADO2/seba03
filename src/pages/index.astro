@@ -54,26 +54,30 @@ import "../styles/card.css";
   </div>
 
   <!-- Script -->
-  <script>
-    const botones = document.querySelectorAll(".win95-button");
-    const tarjetas = document.querySelectorAll(".card");
+ <script>
+  const botones = document.querySelectorAll(".win95-button");
+  const tarjetas = document.querySelectorAll(".card");
 
-    botones.forEach(boton => {
-      boton.addEventListener("click", () => {
-        const target = boton.getAttribute("data-target");
+  botones.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      // 1) Leer el atributo de forma segura
+      const target = boton.getAttribute("data-target");
+      if (!target) return; // si falta, no hacemos nada
 
-        // Ocultar todas las tarjetas
-        tarjetas.forEach(t => t.classList.add("oculto"));
-        tarjetas.forEach(t => t.classList.remove("visible"));
-
-
-        // Mostrar la tarjeta activa
-        const activa = document.getElementById(target);
-        if (activa) {
-          activa.classList.remove("oculto");
-          activa.classList.add("visible");
-        }
+      // 2) Ocultar todo
+      tarjetas.forEach((t) => {
+        t.classList.add("oculto");
+        t.classList.remove("visible");
       });
+
+      // 3) Mostrar solo el card objetivo, si existe
+      const activa = document.getElementById(target);
+      if (!activa) return;
+
+      activa.classList.remove("oculto");
+      activa.classList.add("visible");
     });
-  </script>
+  });
+</script>
+
 </Layout>
