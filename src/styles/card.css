@@ -24,6 +24,14 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+.card h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  color: #00ff99;
+  margin-bottom: 1rem;
+}
+
+
 .card h2 {
     font-size: 1rem;
     margin-bottom: 1rem;
