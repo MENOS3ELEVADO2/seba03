@@ -21,13 +21,14 @@ body {
 
 /* Barra lateral del blog */
 .sidebar {
-    width: auto;                            /* Ancho fijo */
-    min-width: auto;                        /* Ancho mínimo */
+    width: 220px;                            /* Ancho fijo */
     display: flex;                           /* Flexbox para ordenar verticalmente */
     flex-direction: column;
+    flex-shrink: 0;
     align-items: center;                     /* Centrar elementos horizontalmente */
     padding: auto ;          /* Espaciado interno */
-}
+    gap: 0.5rem;                             /* Espacio entre elementos */
+  }
 
 /* Imagen de perfil */
 .perfil {
@@ -80,5 +81,8 @@ body {
   flex-direction: row;        /* (opcional, ya es el valor por defecto) */
   max-width: 1200px;
   margin: 2rem auto;
+  padding: 1rem;
+  gap: 3rem; /* Espacio entre sidebar y contenido */
+  align-items: flex-start; /* Alinea al inicio verticalmente */
 }
 

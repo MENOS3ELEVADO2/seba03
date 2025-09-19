@@ -15,7 +15,7 @@
   box-shadow: 0 0 15px  rgb(34, 14, 251);;
   text-shadow: 0 0 5px rgba(139, 4, 4, 0.7);
 
-  display: flex;
+  display: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -38,17 +38,6 @@
     color: #00ff99;
 }
 
-.card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: #000000;
-}
-
-.card h4 {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #00ff99;
-}
 
 .card p {
     font-size:  0.8rem;
@@ -62,11 +51,11 @@
 }
 
 @media (min-width: 800px) {
-  /*.tarjetas{
-    /*flex-direction: row; /* Cambia a fila en pantallas más grandes */
-    /*flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+  .tarjetas{
+    flex-direction: row; /* Cambia a fila en pantallas más grandes */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
 
-  /*}*/
+  /*}*/}
   .card {
     /*flex: 1 1 calc(100% - 2rem); /* Tres tarjetas por fila con espacio entre ellas */
     max-width: calc(100% - 2rem); /* Asegura que no excedan el ancho disponible */
