@@ -62,11 +62,11 @@
 }
 
 @media (min-width: 800px) {
-  .tarjetas {
+  /*.tarjetas{
     /*flex-direction: row; /* Cambia a fila en pantallas más grandes */
     /*flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
 
-  }
+  /*}*/
   .card {
     /*flex: 1 1 calc(100% - 2rem); /* Tres tarjetas por fila con espacio entre ellas */
     max-width: calc(100% - 2rem); /* Asegura que no excedan el ancho disponible */
