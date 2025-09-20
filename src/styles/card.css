@@ -5,17 +5,18 @@
   text-align: center;
 
   width: 100%;
-  max-width: 300px;
+  max-width: 800px;
+  min-height: 400px;
   height: auto;
-  margin: 5rem auto;
+  margin: 0.5rem auto; /* centrado horizontal con auto */
   padding: 1.5rem;
 
   border: 2px solid rgb(18, 9, 110);
   border-radius: 12px;
-  box-shadow: 0 0 15px  rgb(34, 14, 251);;
+  box-shadow: 0 0 15px rgb(34, 14, 251);
   text-shadow: 0 0 5px rgba(139, 4, 4, 0.7);
 
-  display: center;
+  display: flex; /* ✅ flex en vez de center */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -31,46 +32,45 @@
   margin-bottom: 1.5rem;
 }
 
-
 .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #00ff99;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #00ff99;
 }
 
-
 .card p {
-    font-size:  0.8rem;
-    line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
 .tarjetas {
-  display: center;
-  flex-direction: row; /* o row si quieres alinearlas horizontalmente */
+  display: flex; /*  flex en vez de center */
+  flex-direction: row; 
   gap: 2rem;
+  justify-content: flex-start;
 }
 
 @media (min-width: 800px) {
-  .tarjetas{
-    flex-direction: row; /* Cambia a fila en pantallas más grandes */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+  .tarjetas {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-  /*}*/}
   .card {
-    /*flex: 1 1 calc(100% - 2rem); /* Tres tarjetas por fila con espacio entre ellas */
-    max-width: calc(100% - 2rem); /* Asegura que no excedan el ancho disponible */
-    
+    max-width: 800px; /* ✅ ancho máximo controlado */
+    flex: 5; /* ✅ para que las tarjetas crezcan y ocupen el espacio disponible */
+    min-width: 850px; /* ✅ ancho mínimo para cada tarjeta */
   }
 }
 
 .oculto {
-    display: none;
+  display: none;
 }
 .visible {
-    display: block;
+  display: block;
 }
 
 /* Área principal de contenido */
 .contenido {
- padding: 2.5rem;
+  padding: 2.5rem;
 }

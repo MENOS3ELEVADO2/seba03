@@ -13,21 +13,21 @@ h1 {
 /* Fondo con imagen animada tipo ASCII */
 body {
     background-image: url('../assets/tank.png'); /* Ruta de la imagen */
-    background-repeat: no-repeat;            /* No repetir la imagen */
-    background-position: 520px 50%;       /* Posicionar en la esquina inferior derecha */
-    background-attachment: fixed;            /* Imagen fija al hacer scroll */
-    background-size: 1000px 1000px;                   /* Tamaño automático de la imagen */
+    background-repeat: no-repeat;       /* No repetir la imagen */
+    background-position: 0px 35%;       /* Posicionar en la esquina inferior derecha */
+    background-attachment: fixed;       /* Imagen fija al hacer scroll */
+    background-size: 800px 800px;       /* Tamaño automático de la imagen */
 }
 
 /* Barra lateral del blog */
 .sidebar {
-    width: 220px;                            /* Ancho fijo */
-    display: flex;                           /* Flexbox para ordenar verticalmente */
+    width: 270px;            /* Ancho fijo */
+    display: flex;           /* Flexbox para ordenar verticalmente */
     flex-direction: column;
     flex-shrink: 0;
-    align-items: center;                     /* Centrar elementos horizontalmente */
-    padding: auto ;          /* Espaciado interno */
-    gap: 0.5rem;                             /* Espacio entre elementos */
+    align-items: center;     /* Centrar elementos horizontalmente */
+    padding: auto;          /* Espaciado interno */
+    gap: 0.5rem;             /* Espacio entre elementos */
   }
 
 /* Imagen de perfil */
@@ -36,7 +36,7 @@ body {
     width: 200px;
     height: 200px;
     border: 100%;                     
-    margin-bottom: 2cm;                     /* Espacio debajo de la imagen */
+    margin-bottom: 1cm;                     /* Espacio debajo de la imagen */
     background-size: cover;                 /* Cubrir todo el contenedor */
     background-position: center;            /* Centrar la imagen */ 
     background-repeat: no-repeat;           /* No repetir la imagen */
@@ -79,10 +79,10 @@ body {
 .blog-layout {
   display: flex;              /* Alinea sidebar y contenido en fila */
   flex-direction: row;        /* (opcional, ya es el valor por defecto) */
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 2rem auto;
   padding: 1rem;
-  gap: 3rem; /* Espacio entre sidebar y contenido */
+  gap: 5rem; /* Espacio entre sidebar y contenido */
   align-items: flex-start; /* Alinea al inicio verticalmente */
 }
 

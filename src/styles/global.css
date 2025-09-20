@@ -7,15 +7,15 @@
 /* Clase para aplicar estilo de texto pixelado con sombra y alineación */
 .pixel-text {
   font-family: 'PositiveSystem', monospace; /* Usa la fuente personalizada, y si no está disponible, una fuente monoespaciada */
-  font-size: 75px; /* Tamaño grande de fuente */
-  color: white; /* Color del texto */
+  font-size: 45px; /* Tamaño grande de fuente */
+  color: rgb(156, 47, 47); /* Color del texto */
   text-align: center; /* Centra el texto horizontalmente */
   
   /* Aplica dos sombras al texto:
      - Una sombra negra desplazada 5px en X y Y
      - Otra sombra verde desplazada 7px en X y 8px en Y
   */
-  text-shadow: 5px 5px 0 black, 7px 8px 0 green;
+  text-shadow: 2px 2px 0 black, 3px 3px 0 green;
 
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
   overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
@@ -24,7 +24,7 @@
 /* Animación para parpadeo de un cursor o caret */
 @keyframes blink-caret {
   50% { 
-    border-color: white; /* Esto no tendrá efecto debido al valor fuera de rango */
+    border-color: rgb(28, 4, 250); /* Esto no tendrá efecto debido al valor fuera de rango */
   }
 }
 
