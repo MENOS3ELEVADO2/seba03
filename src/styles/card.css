@@ -11,7 +11,7 @@
   margin: 0.5rem auto; /* centrado horizontal con auto */
   padding: 1.5rem;
 
-  border: 2px solid rgb(18, 9, 110);
+  border: 5px solid rgb(18, 9, 110);
   border-radius: 12px;
   box-shadow: 0 0 15px rgb(34, 14, 251);
   text-shadow: 0 0 5px rgba(139, 4, 4, 0.7);
