@@ -8,7 +8,7 @@
   max-width: 800px;
   min-height: 400px;
   height: auto;
-  margin: 0.5rem auto; /* centrado horizontal con auto */
+  margin: 0.5rem auto;
   padding: 1.5rem;
 
   border: 5px solid rgb(18, 9, 110);
@@ -16,7 +16,7 @@
   box-shadow: 0 0 15px rgb(34, 14, 251);
   text-shadow: 0 0 5px rgba(139, 4, 4, 0.7);
 
-  display: flex; /* ✅ flex en vez de center */
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,7 @@
 }
 
 .tarjetas {
-  display: flex; /*  flex en vez de center */
+  display: flex; 
   flex-direction: row; 
   gap: 2rem;
   justify-content: flex-start;
@@ -57,9 +57,9 @@
   }
 
   .card {
-    max-width: 800px; /* ✅ ancho máximo controlado */
-    flex: 5; /* ✅ para que las tarjetas crezcan y ocupen el espacio disponible */
-    min-width: 850px; /* ✅ ancho mínimo para cada tarjeta */
+    max-width: 800px; /* ancho máximo controlado */
+    flex: 5; /*  para que las tarjetas crezcan y ocupen el espacio disponible */
+    min-width: 850px; /*  ancho mínimo para cada tarjeta */
   }
 }
 
