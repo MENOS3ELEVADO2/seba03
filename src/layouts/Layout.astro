@@ -40,8 +40,10 @@ import "../styles/global.css";
   function escribir() {
     // Verifica si aún quedan letras por escribir
     if (i < texto.length) {
-      // Agrega la letra actual al contenido del elemento
-      elemento.textContent += texto.charAt(i);
+      // Agrega la letra actual al contenido del elemento si existe
+      if (elemento) {
+        elemento.textContent += texto.charAt(i);
+      }
       
 
       // Avanza al siguiente carácter
