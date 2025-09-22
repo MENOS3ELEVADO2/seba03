@@ -16,7 +16,6 @@ import "../styles/card.css";
       
       <!-- Botones -->
       <div class="botones">
-        <button class="win95-button" data-target="inicio">Inicio</button>
         <button class="win95-button" data-target="sobre-mi">Sobre mí</button>
         <button class="win95-button" data-target="proyectos">Proyectos</button>
         <button class="win95-button" data-target="contacto">Contacto</button>
@@ -24,18 +23,16 @@ import "../styles/card.css";
     </aside>
 
     <!-- Contenido -->
-    <section>
-      
-      <!-- Card Inicio -->
-      <div id="inicio" class="card visible">
-        <h1>Hola</h1>
-        <p>Aquí puedes ver mis proyectos destacados.</p>
-      </div>
+    <section>      
 
       <!-- Card Sobre mí -->
       <div id="sobre-mi" class="card oculto">
         <h2>Sobre mí</h2>
-        <p>Soy Sebastián Vejar</p>
+        <p>Soy Sebastián Vejar, estudiante de Ingeniería en Informática.
+         Me interesa especialmente el desarrollo de videojuegos,
+         el análisis de datos y el aprendizaje automático (machine learning).
+         Aunque recién estoy comenzando mi camino, tengo la motivación y
+         las ganas de aportar y lograr grandes resultados trabajando en equipo.</p>
       </div>
 
       <!-- Card Proyectos -->
@@ -47,18 +44,17 @@ import "../styles/card.css";
       <!-- Card Contacto -->
       <div id="contacto" class="card oculto">
         <h2>Contactame</h2>
-        <p>En Linkedin: 
-          En Correo:
-          En GitHub:
-          Numero de teléfono:
-        </p>
+        <p>Puedes ver y Escribirme en Linkedin: <a href="https://www.linkedin.com/in/sebastian-vejar-9a1353297" target="_blank">Mi Perfil de Linkedin</a></p>
+        <p>Escribeme a mi Correo: <a href=https://mail.google.com/mail/?view=cm&fs=1&to=vejars42@gmail.com">vejars42@gmail.com</a></p>
+        <p>Aquí puedes ver mi Trabajos y Escribirme Tambien en GitHub: <a href="https://github.com/MENOS3ELEVADO2" target="_blank">GitHub</a></p>
+        <p>Teléfono: <a href="tel:+56 9 5986 0891">+56 9 5986 0891</a></p>
       </div>
 
     </section>
   </div>
 
   <!-- Script -->
- <script>
+<script>
   const botones = document.querySelectorAll(".win95-button");
   const tarjetas = document.querySelectorAll(".card");
 
