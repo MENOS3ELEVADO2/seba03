@@ -4,27 +4,17 @@
   src: url('/fonts/PositiveSystem.otf') format('opentype'); /* Ruta y formato del archivo de fuente */
 }
 
-/* Clase para aplicar estilo de texto pixelado con sombra y alineación */
+/* Clase para el título de bienvenida */
 .pixel-text {
   font-family: 'PositiveSystem', monospace; /* Usa la fuente personalizada, y si no está disponible, una fuente monoespaciada */
-  font-size: 45px; /* Tamaño grande de fuente */
-  color: rgb(156, 47, 47); /* Color del texto */
-  text-align: center; /* Centra el texto horizontalmente */
-  
-  /* Aplica dos sombras al texto:
-     - Una sombra negra desplazada 5px en X y Y
-     - Otra sombra verde desplazada 7px en X y 8px en Y
-  */
-  text-shadow: 2px 2px 0 black, 3px 3px 0 green;
-
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+  display: block;
+  margin: 0;
+  font-size: clamp(1.5rem, 3.6vw, 2.8rem);
+  color: #e2e9e4;
+  text-align: center;
+  text-shadow: 3px 3px 0 #000000, 0 0 8px rgba(0, 255, 153, 0.55);
+  line-height: 1.4;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
 }
-
-/* Animación para parpadeo de un cursor o caret */
-@keyframes blink-caret {
-  50% { 
-    border-color: rgb(28, 4, 250); /* Esto no tendrá efecto debido al valor fuera de rango */
-  }
-}
-

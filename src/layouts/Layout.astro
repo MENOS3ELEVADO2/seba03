@@ -1,6 +1,7 @@
 ---
 import "../styles/fondo.css";
 import "../styles/global.css";
+import fishVideo from "../assets/pes.mp4";
 ---
 
 <html lang="es">
@@ -11,11 +12,10 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <!-- Encabezado del sitio -->
-    <header>
-      <h1 id="bienvenida" class="pixel-text"></h1>
-    </header>
-  
+    <video class="video-fondo" autoplay loop muted playsinline aria-hidden="true">
+      <source src={fishVideo} type="video/mp4" />
+    </video>
+
     <!-- Contenido principal de la página -->
     <main>
       <slot /> <!-- Aquí se inserta el contenido de cada página -->

@@ -3,74 +3,153 @@ import "../styles/fondo.css";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import "../styles/card.css";
+import perfilImage from "../assets/seba2.jpeg";
+import githubIcon from "../assets/github.PNG";
+import gmailIcon from "../assets/gmail.PNG";
+import linkedinIcon from "../assets/linkedin.png";
+import whatsappIcon from "../assets/wasap2.PNG";
 ---
 
 <Layout>
-  <!-- Contenedor principal del blog -->
   <div class="blog-layout">
+    <header class="page-header">
+      <h1 id="bienvenida" class="pixel-text"></h1>
+    </header>
 
-    <!-- Barra lateral -->
     <aside class="sidebar">
-      <!-- Imagen de perfil -->
-      <img src="../assets/mi-perfil.jpg" alt="Foto de perfil" class="perfil" />
-      
-      <!-- Botones -->
-      <div class="botones">
+      <div class="win95-profile-window">
+        <div class="win95-profile-title">
+          <span>Perfil.exe</span>
+          <button class="win95-close-btn" aria-label="Cerrar Perfil.exe">X</button>
+        </div>
+        <div class="win95-profile-body">
+          <img src={perfilImage.src} alt="Foto de perfil" class="perfil" />
+          <div class="profile-caption">
+            <strong>Sebastián Vejar</strong>
+            <span>Estudiante de Informática</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="botones" aria-label="Secciones del portafolio">
         <button class="win95-button" data-target="sobre-mi">Sobre mí</button>
         <button class="win95-button" data-target="proyectos">Proyectos</button>
         <button class="win95-button" data-target="contacto">Contacto</button>
-      </div>
+      </nav>
     </aside>
 
-    <!-- Contenido -->
-    <section>      
+    <section class="contenido">
 
-      <!-- Card Sobre mí -->
-      <div id="sobre-mi" class="card oculto">
-        <h2>Sobre mí</h2>
-        <p>Soy Sebastián Vejar, estudiante de Ingeniería en Informática.
-         Me interesa especialmente el desarrollo de videojuegos,
-         el análisis de datos y el aprendizaje automático (machine learning).
-         Aunque recién estoy comenzando mi camino, tengo la motivación y
-         las ganas de aportar y lograr grandes resultados trabajando en equipo.</p>
+      <!-- BLOC DE NOTAS: Sobre mí -->
+      <div id="sobre-mi" class="card-notepad visible">
+        <div class="notepad-title-bar">
+          <div class="notepad-title">
+            <span class="icono-cuadrado">■</span> Sobre_mi.txt - Bloc de notas
+          </div>
+          <div class="notepad-controls">
+            <button class="win95-btn">_</button>
+            <button class="win95-btn">□</button>
+            <button class="win95-btn">X</button>
+          </div>
+        </div>
+        <div class="notepad-menu">
+          <span><u>A</u>rchivo</span><span><u>E</u>dición</span><span><u>V</u>er</span><span>A<u>y</u>uda</span>
+        </div>
+        <div class="notepad-content">
+          <h2>Ejecutando presentación<span class="loading-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></h2>
+          <p>Soy Sebastián Vejar, estudiante de Ingeniería en Informática, interesado en el desarrollo de software, el análisis de datos y el aprendizaje automático.</p>
+          <p>Me interesa desarrollar soluciones mediante la programación y continuar fortaleciendo mis conocimientos en Python, redes informáticas y administración de sistemas Linux. También tengo interés en las tecnologías de redes asociadas a Cisco y en seguir aprendiendo sobre análisis y procesamiento de datos.</p>
+          <p>Actualmente estoy construyendo proyectos personales para aplicar mis conocimientos, desarrollar nuevas habilidades y prepararme para mis primeras oportunidades profesionales en el área informática.</p>
+        </div>
+        <div class="notepad-status">
+          <div class="status-left">Listo</div>
+          <div class="status-right">Ln 1, Col 1</div>
+        </div>
       </div>
 
-      <!-- Card Proyectos -->
-      <div id="proyectos" class="card oculto">
-        <h2>Proyectos</h2>
-        <p>Estos son mis proyectos destacados.</p>
+      <!-- BLOC DE NOTAS: Proyectos -->
+      <div id="proyectos" class="card-notepad oculto">
+        <div class="notepad-title-bar">
+          <div class="notepad-title">
+            <span class="icono-cuadrado">■</span> Proyectos.txt - Bloc de notas
+          </div>
+          <div class="notepad-controls">
+            <button class="win95-btn">_</button>
+            <button class="win95-btn">□</button>
+            <button class="win95-btn">X</button>
+          </div>
+        </div>
+        <div class="notepad-menu">
+          <span><u>A</u>rchivo</span><span><u>E</u>dición</span><span><u>V</u>er</span><span>A<u>y</u>uda</span>
+        </div>
+        <div class="notepad-content">
+          <h2>Listando proyectos<span class="loading-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></h2>
+          <p>Estos son mis proyectos destacados.</p>
+        </div>
+        <div class="notepad-status">
+          <div class="status-left">Listo</div>
+          <div class="status-right">Ln 15, Col 4</div>
+        </div>
       </div>
 
-      <!-- Card Contacto -->
-      <div id="contacto" class="card oculto">
-        <h2>Contactame</h2>
-        <p>Puedes ver y Escribirme en Linkedin: <a href="https://www.linkedin.com/in/sebastian-vejar-9a1353297" target="_blank">Mi Perfil de Linkedin</a></p>
-        <p>Escribeme a mi Correo: <a href=https://mail.google.com/mail/?view=cm&fs=1&to=vejars42@gmail.com">vejars42@gmail.com</a></p>
-        <p>Aquí puedes ver mi Trabajos y Escribirme Tambien en GitHub: <a href="https://github.com/MENOS3ELEVADO2" target="_blank">GitHub</a></p>
-        <p>Teléfono: <a href="tel:+56 9 5986 0891">+56 9 5986 0891</a></p>
+      <!-- BLOC DE NOTAS: Contacto -->
+      <div id="contacto" class="card-notepad oculto">
+        <div class="notepad-title-bar">
+          <div class="notepad-title">
+            <span class="icono-cuadrado">■</span> Contacto.txt - Bloc de notas
+          </div>
+          <div class="notepad-controls">
+            <button class="win95-btn">_</button>
+            <button class="win95-btn">□</button>
+            <button class="win95-btn">X</button>
+          </div>
+        </div>
+        <div class="notepad-menu">
+          <span><u>A</u>rchivo</span><span><u>E</u>dición</span><span><u>V</u>er</span><span>A<u>y</u>uda</span>
+        </div>
+        <div class="notepad-content">
+          <h2>Conexiones de red establecidas<span class="loading-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></h2>
+          <div class="contact-links">
+            <a class="contact-link" href="https://www.linkedin.com/in/sebastian-vejar-9a1353297" target="_blank" rel="noreferrer" aria-label="Abrir perfil de LinkedIn" title="LinkedIn">
+              <img class="contact-icon" src={linkedinIcon.src} alt="" />
+              <span>LinkedIn</span>
+            </a>
+            <a class="contact-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vejars42@gmail.com" target="_blank" rel="noreferrer" aria-label="Escribir a vejars42@gmail.com" title="Gmail">
+              <img class="contact-icon" src={gmailIcon.src} alt="" />
+              <span>Gmail</span>
+            </a>
+            <a class="contact-link" href="https://github.com/MENOS3ELEVADO2" target="_blank" rel="noreferrer" aria-label="Abrir perfil de GitHub" title="GitHub">
+              <img class="contact-icon" src={githubIcon.src} alt="" />
+              <span>GitHub</span>
+            </a>
+            <a class="contact-link" href="https://wa.me/56959860891" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp al +56 9 5986 0891" title="WhatsApp">
+              <img class="contact-icon" src={whatsappIcon.src} alt="" />
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+        <div class="notepad-status">
+          <div class="status-left">Listo</div>
+          <div class="status-right">Ln 4, Col 12</div>
+        </div>
       </div>
 
     </section>
-  </div>
 
-  <!-- Script -->
 <script>
   const botones = document.querySelectorAll(".win95-button");
-  const tarjetas = document.querySelectorAll(".card");
+  const tarjetas = document.querySelectorAll(".card-notepad");
 
   botones.forEach((boton) => {
     boton.addEventListener("click", () => {
-      // 1) Leer el atributo de forma segura
       const target = boton.getAttribute("data-target");
-      if (!target) return; // si falta, no hacemos nada
+      if (!target) return;
 
-      // 2) Ocultar todo
       tarjetas.forEach((t) => {
         t.classList.add("oculto");
         t.classList.remove("visible");
       });
 
-      // 3) Mostrar solo el card objetivo, si existe
       const activa = document.getElementById(target);
       if (!activa) return;
 

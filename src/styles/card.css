@@ -1,76 +1,213 @@
-.card {
-  background-color: #000000;
-  color: white;
-  font-family: 'Press Start 2P', monospace;
-  text-align: center;
+/* --- MARCO BLOC DE NOTAS FLOTANTE --- */
+.card-notepad {
+  box-sizing: border-box;
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  /* Aquí está el efecto flotante: una sombra negra semitransparente fuera del marco */
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px #808080, 10px 10px 20px rgba(0, 0, 0, 0.6);
 
   width: 100%;
-  max-width: 800px;
-  min-height: 400px;
-  height: auto;
-  margin: 0.5rem auto;
-  padding: 1.5rem;
-
-  border: 5px solid rgb(18, 9, 110);
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgb(34, 14, 251);
-  text-shadow: 0 0 5px rgba(139, 4, 4, 0.7);
-
-  display: flex; 
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  font-family: Arial, sans-serif;
+  color: black;
 }
 
-.card h1 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1.5rem;
-  color: #00ff99;
-  margin-bottom: 1.5rem;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #00ff99;
-}
-
-.card p {
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-
-.tarjetas {
-  display: flex; 
-  flex-direction: row; 
-  gap: 2rem;
-  justify-content: flex-start;
-}
-
-@media (min-width: 800px) {
-  .tarjetas {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .card {
-    max-width: 800px; /* ancho máximo controlado */
-    flex: 5; /*  para que las tarjetas crezcan y ocupen el espacio disponible */
-    min-width: 850px; /*  ancho mínimo para cada tarjeta */
-  }
-}
-
-.oculto {
+.card-notepad.oculto {
   display: none;
 }
-.visible {
-  display: block;
+
+.card-notepad.visible {
+  display: flex;
 }
 
-/* Área principal de contenido */
-.contenido {
-  padding: 2.5rem;
+/* Barra azul superior */
+.notepad-title-bar {
+  background-color: #000080; /* Azul clásico */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.notepad-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 2px;
+}
+
+.icono-cuadrado {
+  color: white;
+  font-size: 12px;
+}
+
+/* Controles de la ventana (Min, Max, Cerrar) */
+.notepad-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.win95-btn {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 1px 6px;
+  cursor: pointer;
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px #808080;
+}
+.win95-btn:active {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px #808080, inset -1px -1px #dfdfdf;
+}
+
+/* Menú (Archivo, Edición...) */
+.notepad-menu {
+  background-color: #c0c0c0;
+  padding: 4px 10px;
+  font-size: 14px;
+  display: flex;
+  gap: 15px;
+}
+.notepad-menu span:hover {
+  background-color: #000080;
+  color: white;
+  cursor: pointer;
+}
+
+/* Área de texto blanca (hundida) */
+.notepad-content {
+  background-color: #ffffff;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+
+  padding: 20px 30px;
+  margin: 0 4px; /* Margen para que se vea el gris a los lados */
+  min-height: 350px;
+  overflow-y: auto; /* Agrega barra de scroll si el texto es muy largo */
+}
+
+/* Estilos del texto interno */
+.notepad-content h2 {
+  font-family: 'Arial', sans-serif;
+  color: black;
+  font-size: 20px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.loading-dots span {
+  animation: loading-dot 1.2s steps(1, end) infinite;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading-dot {
+  0%,
+  49% {
+    opacity: 0;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-dots span {
+    animation: none;
+  }
+}
+
+.notepad-content p, .notepad-content ul {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.notepad-content ul {
+  padding-left: 20px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-link {
+  display: flex;
+  min-width: 5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000080;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-link:hover,
+.contact-link:visited {
+  color: #000080;
+}
+
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.contact-link:focus-visible {
+  outline: 2px solid #000080;
+  outline-offset: 4px;
+}
+
+/* Barra de estado inferior */
+.notepad-status {
+  display: flex;
+  padding: 4px;
+  gap: 4px;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.status-left, .status-right {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 3px 6px;
+}
+
+.status-left {
+  flex-grow: 1; /* Ocupa todo el espacio disponible izquierdo */
+}
+.status-right {
+  min-width: 100px;
+  text-align: left;
 }

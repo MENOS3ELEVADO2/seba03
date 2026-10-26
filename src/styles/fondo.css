@@ -1,71 +1,213 @@
-/* Fondo negro para toda la página */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --page-bg: #050914;
+  --panel-bg: #1e293b;
+  --card-bg: #101019;
+  --text-primary: #e2e9e4;
+  --text-secondary: #cbd5e1;
+  --accent: #00ff99;
+  --metal-frame: linear-gradient(
+    135deg,
+    #54708f 0%,
+    #243a59 18%,
+    #607b9a 34%,
+    #1b2c43 52%,
+    #3c5d83 72%,
+    #263d5d 86%,
+    #54708f 100%
+  );
+}
+
+html {
+  background: transparent;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-    background-color: black;
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+  background: transparent;
+}
+
+.video-fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 10;
+  pointer-events: none;
+}
+
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* Estilo principal para títulos */
 h1 {
-    color: rgb(255, 255, 255);
+  color: var(--text-primary);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Fondo con imagen animada tipo ASCII */
-body {
-    background-image: url('../assets/tank.png'); /* Ruta de la imagen */
-    background-repeat: no-repeat;       /* No repetir la imagen */
-    background-position: 0px 35%;       /* Posicionar en la esquina inferior derecha */
-    background-attachment: fixed;       /* Imagen fija al hacer scroll */
-    background-size: 800px 800px;       /* Tamaño automático de la imagen */
+/* Barra lateral del blog */
+/* Tarjeta de cristal flotante; el margen la separa de los bordes de la pantalla. */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 270px;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-right-color: rgba(255, 255, 255, 0.4);
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 1px 0 0 rgba(255, 255, 255, 0.45),
+    0 8px 32px rgba(0, 30, 60, 0.3);
+  border-radius: 18px;
+  margin: 20px;
 }
 
-/* Barra lateral del blog */
-.sidebar {
-    width: 270px;            /* Ancho fijo */
-    display: flex;           /* Flexbox para ordenar verticalmente */
-    flex-direction: column;
-    flex-shrink: 0;
-    align-items: center;     /* Centrar elementos horizontalmente */
-    padding: auto;          /* Espaciado interno */
-    gap: 0.5rem;             /* Espacio entre elementos */
-  }
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
 
-/* Imagen de perfil */
+/* --- ESTILOS VENTANA PERFIL WIN95 --- */
+.win95-profile-window {
+  box-sizing: border-box;
+  background: #c0c0c0;
+  width: min(220px, 100%);
+  padding: 2px;
+  /* Borde Outset (relieve hacia afuera) */
+  border: 2px solid;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px #808080;
+  display: flex;
+  flex-direction: column;
+}
+
+.win95-profile-title {
+  background: linear-gradient(90deg, #000080, #1084d0); /* Azul marino clásico */
+  color: white;
+  padding: 3px 4px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.win95-close-btn {
+  background: #c0c0c0;
+  border: 1px solid;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px #808080;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.win95-close-btn:active {
+  border-color: #000000 #ffffff #ffffff #000000;
+  box-shadow: inset 1px 1px #808080, inset -1px -1px #dfdfdf;
+}
+
+.win95-profile-body {
+  padding: 4px;
+  background: #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.profile-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  color: #000;
+  text-align: center;
+}
+
+.profile-caption strong {
+  font-size: 1rem;
+}
+
+.profile-caption span {
+  font-size: 0.875rem;
+}
+
+/* Redefinición de tu imagen para que encaje en el estilo */
 .perfil {
-    background-image: url('../assets/otro mapche.jpeg'); /* Ruta de la imagen de perfil */
-    width: 200px;
-    height: 200px;
-    border: 100%;                     
-    margin-bottom: 1cm;                     /* Espacio debajo de la imagen */
-    background-size: cover;                 /* Cubrir todo el contenedor */
-    background-position: center;            /* Centrar la imagen */ 
-    background-repeat: no-repeat;           /* No repetir la imagen */
-    position: relative;                      /* Posicionamiento relativo */
-    z-index: 1;                             /* Asegura que la imagen esté por encima de otros elementos */
-    transition: transform 0.3s ease;        /* Transición suave para el efecto hover */
-
-  }
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  /* Borde Sunken (hundido hacia adentro) */
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  border-radius: 0; /* Eliminamos el border-radius porque Win95 era cuadrado */
+}
   
 /* Estilo para los botones tipo Windows 95 */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 .win95-button {
+  box-sizing: border-box;
   width: 100%; /* Ancho completo del contenedor */
   padding: 1rem; /* Espaciado interno */
   font-family: 'Press Start 2P', monospace; /* Fuente pixelada */
-  font-size: 15px;
+  font-size: clamp(12px, 1.1vw, 15px);
   color: black;
-  background-color: #c0c0c0; /* Gris clásico */
-  border: 2px solid #fff; /* Borde superior/izquierdo claro */
-  border-right: 2px solid #404040; /* Borde derecho oscuro */
+  background-color: #c0c0c0;
+  border: 2px solid #fff;
+  border-right: 2px solid #404040;
   border-bottom: 2px solid #404040;
   padding: 10px 15px 10px; /* Espaciado interno */
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 10px; /* Espacio entre icono y texto */
-  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff; /* Bisel interno */
+  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff;
   cursor: pointer;
-  margin: 5px 0; /* Espacio entre botones */
+  margin: 0;
 }
 
 .win95-button:active {
@@ -73,16 +215,113 @@ body {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
   box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #fff;
+  transform: translate(1px, 1px);
+}
+
+.win95-button:hover {
+  color: black;
+  background-color: #d6d6d6;
+}
+
+.win95-button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+a {
+  color: #b6efc7;
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: #d5ffe2;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #b6efc7;
+}
+
+footer {
+  padding: 1.25rem 1rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
 
 /* Contenedor principal del blog */
+/* Mantiene el contenido fuera del espacio que ocupa la sidebar flotante. */
 .blog-layout {
-  display: flex;              /* Alinea sidebar y contenido en fila */
-  flex-direction: row;        /* (opcional, ya es el valor por defecto) */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  row-gap: clamp(1.25rem, 2vw, 1.75rem);
   max-width: 1500px;
-  margin: 2rem auto;
-  padding: 1rem;
-  gap: 5rem; /* Espacio entre sidebar y contenido */
-  align-items: flex-start; /* Alinea al inicio verticalmente */
+  width: calc(100% - 310px);
+  box-sizing: border-box;
+  margin: 0 0 0 310px;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  align-items: stretch;
+  background: transparent;
 }
 
+.page-header {
+  grid-column: 1;
+  width: min(100%, 920px);
+  box-sizing: border-box;
+  justify-self: center;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+
+
+.contenido {
+  min-width: 0;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+@media (max-width: 760px) {
+  .blog-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    row-gap: 1.25rem;
+  }
+
+  .page-header,
+  .sidebar,
+  .contenido {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    grid-row: auto;
+    margin: 0 auto;
+  }
+
+  .botones {
+    max-width: 220px;
+  }
+
+  .page-header {
+    padding: 0.5rem 0.25rem;
+  }
+
+}
